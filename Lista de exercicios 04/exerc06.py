@@ -3,7 +3,7 @@ def selecao_ordenacao(vetor):
     for i in range(n):
         indice_minimo = i
         for j in range(i + 1, n):
-            if vetor[j] < vetor[indice_minimo]:
+            if vetor[j] > vetor[indice_minimo]:
                 indice_minimo = j
         vetor[i], vetor[indice_minimo] = vetor[indice_minimo], vetor[i]
 
@@ -21,4 +21,5 @@ def contar_par_imp(vetor):
 vetor=[5,7,2,3]
 selecao_ordenacao(vetor)
 ct=contar_par_imp(vetor)
+print(vetor)
 print(ct[0],ct[1])
